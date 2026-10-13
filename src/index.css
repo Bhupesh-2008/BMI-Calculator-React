@@ -1,3 +1,5 @@
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -106,5 +108,4 @@ input:focus {
 .center p {
   font-size: 16px;
   font-weight: 500;
-  color: #ff6b6b; /* Makes the message pop */
 }

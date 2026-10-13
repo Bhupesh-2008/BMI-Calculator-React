@@ -7,6 +7,9 @@ function App() {
   const [height,setHeight]=useState();
   const [bmi,setBmi]=useState('');
   const [message,setMessage]=useState('');
+  const [msgColor,setMsgColor] = useState('');
+
+
 
   //logic
   let calcBmi=(e)=>{
@@ -21,12 +24,15 @@ function App() {
 
       if(bmi<25){
         setMessage("You are underweight!!!")
+        setMsgColor("#e6b800")
       }
       else if(bmi>=25 && bmi<30){
         setMessage("You are a heathy person.")
+        setMsgColor("#28a745")
       }
       else {
         setMessage("You are overweight!!!!")
+        setMsgColor("#dc3545")
       }
     }
   }
@@ -74,7 +80,7 @@ function App() {
 
           <div className="center">
             <h3>Your BMI is: {bmi}</h3>
-            <p>{message}</p>
+            <p style={{color:msgColor}}>{message}</p>
           </div>
         </form>
       </div>
